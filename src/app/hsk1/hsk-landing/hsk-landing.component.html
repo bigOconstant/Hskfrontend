@@ -1,0 +1,14 @@
+
+<!-- <app-vocabulary *ngIf="hsk1" [hsk1]="hsk1"><app-vocabulary> -->
+  <h2>HSK Level {{level}}</h2>
+<mat-tab-group>
+  <mat-tab class="switch-label" label="Hanzi">
+
+    <app-vocabulary *ngIf="level" [level]="level"></app-vocabulary>
+  </mat-tab>
+  <mat-tab class="switch-label" label="Word List">
+
+    <app-word-list *ngIf="level" [level]="level"></app-word-list>
+  </mat-tab>
+</mat-tab-group>
+

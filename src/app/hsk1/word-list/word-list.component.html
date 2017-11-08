@@ -1,0 +1,46 @@
+
+<h3>Word List</h3>
+<div class="example-container mat-elevation-z8">
+    
+  <mat-table #table [dataSource]="dataSource">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="hanzi">
+      <mat-header-cell *matHeaderCellDef> Hanzi </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Hanzi}} </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="pinyin">
+      <mat-header-cell *matHeaderCellDef> Pinyin </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Pinyin}} </mat-cell>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <!-- <ng-container matColumnDef="level">
+      <mat-header-cell *matHeaderCellDef> Level </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Level}} </mat-cell>
+    </ng-container> -->
+
+    <!-- Color Column -->
+    <ng-container matColumnDef="definition">
+      <mat-header-cell *matHeaderCellDef> Definition </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Definition}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+  <mat-paginator #paginator
+  [length]="length"
+  [pageIndex]="pageIndex"
+  [pageSize]="pageSize"
+  [pageSizeOptions]="[5, 10, 25, 100]"
+  (page)="pageEvent = handlePageEvent($event)">
+<button>Test</button>
+</mat-paginator>
+<button (click)="downloadExcel()" mat-raised-button color="primary">Download Excel</button>
+</div>

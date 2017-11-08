@@ -1,0 +1,41 @@
+h2,p,label{
+  font-family: roboto;
+}
+mat-grid-tile {
+    background: lightblue;
+  }
+
+  .hanziPicked{
+    background: rgba(156,39,176,.3);
+  }
+  .haziNotPicked{
+    background: rgba(212, 42, 250, 0.3);
+  }
+
+  label {
+    font-size:2em;
+    font-weight: bold;
+}
+
+.pinyin{
+    margin-right:3px;
+    width:100%;
+}
+.example-card {
+    min-width: 145px;
+    max-width: 145px;
+    min-height:80px;
+    max-height:100px;
+    margin: 5px;
+  }
+  .row{
+    display: inline-block;
+  }
+  .hanzi{
+      font-size: 2em;
+  }
+  .number{
+    position: absolute;
+    left: 3px;
+    top: -16px;
+  }

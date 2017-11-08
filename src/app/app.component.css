@@ -1,0 +1,27 @@
+.logo{
+    font-size: 14em;
+}
+
+mat-toolbar.mat-toolbar {
+    margin-left: -8px;
+    margin-top: -8px;
+    width: 102%;
+}
+mat-progress-bar{
+    margin-left: -8px;
+    margin-top: -6px;
+    width: 102%;
+}
+
+md-spinner {
+    float:right; 
+    width: 14px; 
+    height: 14px; 
+    margin: 5px 10px 0px 0px;
+  }
+
+  mat-spinner.mat-spinner.mat-progress-spinner.mat-primary.mat-progress-spinner-indeterminate-animation {
+    /* float: right; */
+    position: fixed;
+    right: 15px;
+}
