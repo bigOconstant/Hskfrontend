@@ -1,11 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/purple-green.css';
 
-
-  div#mat-tab-label-0-0,div#mat-tab-label-1-0,div#mat-tab-label-2-0 ,div#mat-tab-label-2-1{
+/*
+  div#mat-tab-label-0-0,div#mat-tab-label-1-0,div#mat-tab-label-2-0 ,div#mat-tab-label-2-1,div#mat-tab-label-3-0,div#mat-tab-label-4-0{
     color: black;
 }
-div#mat-tab-label-0-1,div#mat-tab-label-1-1 {
+div#mat-tab-label-0-1,div#mat-tab-label-1-1,div#mat-tab-label-3-1,div#mat-tab-label-2-1,div#mat-tab-label-4-1 {
     color: black;
-}
+} */
 
+
+.mat-tab-label, .mat-tab-link {
+  color: black;
+}

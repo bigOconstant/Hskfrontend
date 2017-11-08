@@ -51,12 +51,13 @@ export class VocabularyComponent implements OnInit {
   @Input() level:string;
   constructor(private route: ActivatedRoute,private hsk1Service:hskService,public dialog: MatDialog) {
    // this.setToZero();
+
    this.setColumns();
    //this.paginator.pageSize = 25;
 
   }
 
-  
+
 
   openDialog(hskInput:hsk): void {
     let dialogRef = this.dialog.open(HskDialogComponent, {
@@ -91,7 +92,8 @@ export class VocabularyComponent implements OnInit {
   }
 
   setColumns(){
-    var width = window.screen.width ;
+
+    var width = window.innerWidth ;
 
     if (width > 950) {
       this.columns = 6;

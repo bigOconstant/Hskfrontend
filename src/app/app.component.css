@@ -14,9 +14,9 @@ mat-progress-bar{
 }
 
 md-spinner {
-    float:right; 
-    width: 14px; 
-    height: 14px; 
+    float:right;
+    width: 14px;
+    height: 14px;
     margin: 5px 10px 0px 0px;
   }
 
@@ -24,4 +24,10 @@ md-spinner {
     /* float: right; */
     position: fixed;
     right: 15px;
+}
+
+button.menu.mat-raised-button {
+  float: right;
+  position: absolute;
+  right: 8px;
 }

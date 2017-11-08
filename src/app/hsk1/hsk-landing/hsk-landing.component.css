@@ -14,3 +14,21 @@
   h2,p,label{
     font-family: roboto;
   }
+  mat-tab{
+    color:black;
+  }
+  .mat-tab-label{
+    color:black;
+  }
+  .mat-tab-list .mat-tab-labels .mat-tab-label{
+    color:black;
+  }
+  div > div.mat-tab-label.mat-ripple.mat-tab-label-active{
+    color:black
+  }
+
+  .mat-tab-label, .mat-tab-link {
+    color: green;
+
+
+  }

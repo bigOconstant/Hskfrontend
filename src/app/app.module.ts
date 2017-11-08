@@ -12,12 +12,22 @@ import { HskLevelOneComponent } from './hsk-level-one/hsk-level-one.component';
 import { HomeComponent } from './home/home.component';
 import {AppRouting} from './app.routing';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MatCheckboxModule } from '@angular/material';
-import {MatToolbarModule,MatButtonModule,MatMenuModule} from '@angular/material';
-import {MatProgressSpinnerModule} from '@angular/material';
+
+
+
 import {Loading} from './SharedServices/loading.service';
-import {MatProgressBarModule} from '@angular/material';
-import {MatIconModule} from '@angular/material';
+
+import { MatIconModule,
+          MatCardModule,
+          MatGridListModule,
+          MatProgressBarModule,
+          MatProgressSpinnerModule,
+          MatToolbarModule,
+          MatButtonModule,
+          MatMenuModule,
+          MatCheckboxModule
+        } from '@angular/material';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,9 +35,9 @@ import {MatIconModule} from '@angular/material';
     TestComponent2Component,
     HskLevelOneComponent,
     HomeComponent,
-    
-    
-    
+
+
+
   ],
   imports: [
     BrowserModule,
@@ -42,10 +52,12 @@ import {MatIconModule} from '@angular/material';
     MatButtonModule,
     MatProgressSpinnerModule,
     MatProgressBarModule,
-    MatIconModule
-    
+    MatIconModule,
+    MatCardModule,
+    MatGridListModule
 
-    
+
+
   ],
   providers: [appService],
   bootstrap: [AppComponent]

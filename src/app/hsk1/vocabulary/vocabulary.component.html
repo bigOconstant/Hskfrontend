@@ -1,7 +1,8 @@
-<h2>Vocabulary List </h2>
+<h2>hsk {{level}} </h2>
+<h3>Vocabulary List</h3>
 
 <!-- <mat-grid-list cols="4" rowHeight="2:1"> -->
-   
+
     <mat-grid-list cols="{{columns}}" rowHeight="2:1" (window:resize)="onResize($event)">
 
         <div class="row" *ngFor="let h of hsk1;let i = index">
