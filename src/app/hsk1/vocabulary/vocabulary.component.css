@@ -6,7 +6,10 @@ mat-grid-tile {
   }
 
   .hanziPicked{
-    background: rgba(156,39,176,.3);
+    background: #424242;
+  }
+  .inner{
+    color:white;
   }
   .haziNotPicked{
     background: rgba(212, 42, 250, 0.3);
