@@ -12,7 +12,7 @@ import {MatButtonModule,MatMenuModule, MatCheckboxModule} from '@angular/materia
 export class AppComponent implements OnInit{
   title = 'HSK Class';
   leveltitle = "hsk1";
-  constructor(private http: HttpClient,private apps:appService){
+  constructor(private http: HttpClient,public apps:appService){
     this.value = "1";
     this.loading = true;
   }

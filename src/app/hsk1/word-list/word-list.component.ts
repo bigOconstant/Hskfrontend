@@ -30,7 +30,7 @@ export class WordListComponent implements OnInit {
   pageIndex:number;
   pageSize:number;
 
-  constructor(private hsk1Service:hskService,private csvService: CsvService) {
+  constructor(public hsk1Service:hskService,public csvService: CsvService) {
     
     
        }

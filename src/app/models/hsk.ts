@@ -1,4 +1,4 @@
-export class hsk {
+export interface hsk {
     hanzi:string;
     pinyin:string;
     definition:string;

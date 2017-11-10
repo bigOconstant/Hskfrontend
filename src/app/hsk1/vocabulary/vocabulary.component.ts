@@ -8,23 +8,6 @@ import {hskService} from '../hskCommonServices/hsk1.service';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import {HskDialogComponent} from '../hsk-dialog/hsk-dialog.component';
 
-@Component({
-  selector: 'dialog-overview-example-dialog',
-  templateUrl: './dialog.html',
-})
-export class DialogOverviewExampleDialog {
-
-  constructor(
-    public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
-    @Inject(MAT_DIALOG_DATA) public data: any) { }
-
-  onNoClick(): void {
-    this.dialogRef.close();
-  }
-
-}
-
-
 
 @Component({
   selector: 'app-vocabulary',
@@ -49,7 +32,7 @@ export class VocabularyComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   //@Input() hsk1: hsk[];
   @Input() level:string;
-  constructor(private route: ActivatedRoute,private hsk1Service:hskService,public dialog: MatDialog) {
+  constructor(public route: ActivatedRoute,public hsk1Service:hskService,public dialog: MatDialog) {
    // this.setToZero();
 
    this.setColumns();
