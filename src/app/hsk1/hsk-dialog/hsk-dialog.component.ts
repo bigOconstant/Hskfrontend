@@ -12,7 +12,6 @@ export class HskDialogComponent  {
 
 
   onNoClick(): void {
-    console.log("Clicked close");
     this.dialogRef.close();
   }
 

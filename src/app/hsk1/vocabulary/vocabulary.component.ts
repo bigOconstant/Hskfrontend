@@ -15,29 +15,21 @@ import {HskDialogComponent} from '../hsk-dialog/hsk-dialog.component';
   styleUrls: ['./vocabulary.component.css']
 })
 export class VocabularyComponent implements OnInit {
-  //hsk1:hsk[];
   hskLevel:string;
-
   buttonText:string;
   columns:number;
   hsk1: hsk[];
   length:number;
   pageIndex:number;
   pageSize:number;
-
   animal: string;
   name: string;
 
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
-  //@Input() hsk1: hsk[];
   @Input() level:string;
   constructor(public route: ActivatedRoute,public hsk1Service:hskService,public dialog: MatDialog) {
-   // this.setToZero();
-
    this.setColumns();
-   //this.paginator.pageSize = 25;
-
   }
 
 
@@ -49,7 +41,6 @@ export class VocabularyComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
       this.animal = result;
     });
   }

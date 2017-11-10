@@ -1,6 +1,7 @@
 
-<h2>Welcome to hsk study</h2>
-
+<h1>HSK Hanyu</h1>
+<h2>Study for the HSK anywhere</h2>
+<div class="box-container">
 <mat-grid-list cols="{{columns}}" rowHeight="3:1.4" (window:resize)="onResize($event)">
 
   <div class="row" *ngFor="let h of homeLinks;let i = index">
@@ -26,3 +27,4 @@
 
     </div>
    </mat-grid-list>
+  </div>

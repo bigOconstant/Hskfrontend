@@ -22,12 +22,12 @@ export class appService{
 
      getHsks(level:string){
          this.setLoading(true);
-        return this.http.get<hsk[]>('http://localhost:8000/getAllHsk?hskLevel='+level);
+        return this.http.get<hsk[]>('http://hskhanyu.com:8000/getAllHsk?hskLevel='+level);
     }
 
     getPagedHsk(level:string,pageSize:number,page:number){
         this.setLoading(true);
-       return this.http.get<hsk[]>('http://localhost:8000/pagedHsk?hskLevel='+level+"&page="+page+"&pageSize="+pageSize);
+       return this.http.get<hsk[]>('http://hskhanyu.com:8000/pagedHsk?hskLevel='+level+"&page="+page+"&pageSize="+pageSize);
    }
 
 

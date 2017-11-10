@@ -21,7 +21,6 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
   setColumns(){
-    //console.log("Setting initial inside")
     var width = window.innerWidth;
     if (width > 1057) {
       this.columns = 3;
@@ -39,7 +38,7 @@ export class HomeComponent implements OnInit {
   onResize(event) {
     var width = event.target.innerWidth;
 
-    console.log("Width changed to "+width);
+
 
     //this.setColumns();
 
@@ -57,9 +56,8 @@ export class HomeComponent implements OnInit {
 
   }
   navigate(link:HomeLink){
-    console.log('/hsk1?level='+link.params);
     this.router.navigateByUrl('/hsk1?level='+link.params);
-    //this.router.navigate(['/']);
+
   }
 
   initHomeLinks(){

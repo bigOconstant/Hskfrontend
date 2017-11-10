@@ -23,12 +23,9 @@ export class HskLandingComponent implements OnInit {
   ngOnInit() {
 
     this.hskLevel = "HSK 1";
-   // console.log("Initing!")
     this.route.queryParams
     .filter(params => params.level)
     .subscribe(params => {
-     // console.log(params); // {order: "popular"}
-
       this.level = params.level;
       this.hskLevel = "HSK "+this.level;
 

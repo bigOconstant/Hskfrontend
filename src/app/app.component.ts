@@ -53,10 +53,7 @@ updateList(){
   ngOnInit(): void {
     
     var level = "1";
-    // this.apps.getHsks(level).subscribe(data=>{
-    //   this.hsk1 = data;
-    //   console.log(this.hsk1);
-    // });
+
   }
 
   }
