@@ -18,10 +18,12 @@ import { MatIconModule,
           MatMenuModule,
           MatCheckboxModule
 } from '@angular/material';
+import { AboutComponent } from './home/about/about.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,13 @@
+.card-author{
+    margin:auto;
+    max-width:500px;
+    margin-top:20px;
+}
+.email-button{
+    /* width:100%; */
+}
+.card-image{
+    margin-left:3px;
+    margin-right:3px;
+    width:99%;
+}
