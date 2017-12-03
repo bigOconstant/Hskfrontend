@@ -1,12 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {hsk} from './models/hsk';
+import {ServiceUrl} from './models/ServiceUrl'
 
 @Injectable()
 export class appService{
     public loading: boolean;
+    serviceUrl:ServiceUrl;
     constructor(private http: HttpClient){
         this.loading = false;
+        this.serviceUrl = new ServiceUrl();
 
     }
     setLoading(val:boolean){
@@ -22,13 +25,18 @@ export class appService{
 
      getHsks(level:string){
          this.setLoading(true);
-        return this.http.get<hsk[]>('http://hskhanyu.com:8000/getAllHsk?hskLevel='+level);
+        return this.http.get<hsk[]>(this.serviceUrl.url+'/getAllHsk?hskLevel='+level);
     }
 
     getPagedHsk(level:string,pageSize:number,page:number){
         this.setLoading(true);
-       return this.http.get<hsk[]>('http://hskhanyu.com:8000/pagedHsk?hskLevel='+level+"&page="+page+"&pageSize="+pageSize);
-   }
+       return this.http.get<hsk[]>(this.serviceUrl.url+'/pagedHsk?hskLevel='+level+"&page="+page+"&pageSize="+pageSize);
+    }
+    
+    getPagedCedict(level:string,pageSize:number,page:number){
+        this.setLoading(true);
+       return this.http.get<hsk[]>(this.serviceUrl.url+'/pagedcedict?page='+page+"&pageSize="+pageSize);
+    }
 
 
 }

@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import {appService} from './app.service';
 import { RouterModule, Routes } from '@angular/router';
 import {Hsk1Module} from './hsk1/hsk1.module';
+import {CedictModule} from './cedict/cedict.module'
 import { HomeComponent } from './home/home.component';
 import {AppRouting} from './app.routing';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -30,6 +31,7 @@ import { AboutComponent } from './home/about/about.component';
     HttpClientModule,
     AppRouting,
     Hsk1Module,
+    CedictModule,
     BrowserAnimationsModule,
     MatCheckboxModule,
     MatMenuModule,

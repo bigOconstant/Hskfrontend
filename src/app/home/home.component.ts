@@ -56,18 +56,19 @@ export class HomeComponent implements OnInit {
 
   }
   navigate(link:HomeLink){
-    this.router.navigateByUrl('/hsk1?level='+link.params);
+    this.router.navigateByUrl(link.url+link.params);
 
   }
 
   initHomeLinks(){
     this.homeLinks = [];
-    this.homeLinks.push(new HomeLink("HSK1","","Beginner Mandarin. 150 words","1"));
-    this.homeLinks.push(new HomeLink("HSK2","","Beginner Mandarin. 150 words","2"));
-    this.homeLinks.push(new HomeLink("HSK3","","Intermediate Mandarin. 300 words","3"));
-    this.homeLinks.push(new HomeLink("HSK4","","Intermediate Mandarin. 600 words","4"));
-    this.homeLinks.push(new HomeLink("HSK5","","Advanced Mandarin. 1300 words","5"));
-    this.homeLinks.push(new HomeLink("HSK6","","Advanced Mandarin. 2500 words","6"));
+    this.homeLinks.push(new HomeLink("HSK1","/hsk1?level=","Beginner Mandarin. 150 words","1"));
+    this.homeLinks.push(new HomeLink("HSK2","/hsk1?level=","Beginner Mandarin. 150 words","2"));
+    this.homeLinks.push(new HomeLink("HSK3","/hsk1?level=","Intermediate Mandarin. 300 words","3"));
+    this.homeLinks.push(new HomeLink("HSK4","/hsk1?level=","Intermediate Mandarin. 600 words","4"));
+    this.homeLinks.push(new HomeLink("HSK5","/hsk1?level=","Advanced Mandarin. 1300 words","5"));
+    this.homeLinks.push(new HomeLink("HSK6","/hsk1?level=","Advanced Mandarin. 2500 words","6"));
+    this.homeLinks.push(new HomeLink("CEDICT","/cedict","Browse all Chinese words like ever",""));
 
   }
 
@@ -76,13 +77,13 @@ export class HomeComponent implements OnInit {
 
 export class HomeLink{
   title:string;
-  picture:string;
+  url:string;
   description:string;
   params:string;
 
-  constructor(title:string,picture:string,description:string,params:string){
+  constructor(title:string,url:string,description:string,params:string){
     this.title = title;
-    this.picture = picture;
+    this.url = url;
     this.description = description;
     this.params = params;
   }
