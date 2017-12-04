@@ -5,16 +5,20 @@
     <button class="menu" mat-raised-button [matMenuTriggerFor]="menu"> <mat-icon>menu</mat-icon></button>
     <button mat-button [routerLink]="['']"><mat-icon>home</mat-icon></button>
     <mat-menu #menu="matMenu">
-      <a  mat-menu-item >Close</a>
+      <a class="menu-text" mat-menu-item [routerLink]="['']">Home</a>
+      <a class="menu-text" mat-menu-item [routerLink]="['cedict']">Dictonary</a>
+      
 
-        <a mat-menu-item [routerLink]="['']">Home</a>
-        <a mat-menu-item [routerLink]="['about']">About</a>
-        <a mat-menu-item [routerLink]="['hsk1']" [queryParams]="{level: 1 }">hsk1</a>
-        <a mat-menu-item [routerLink]="['hsk1']" [queryParams]="{level: 2 }">hsk2</a>
-        <a mat-menu-item [routerLink]="['hsk1']" [queryParams]="{level: 3 }">hsk3</a>
-        <a mat-menu-item [routerLink]="['hsk1']" [queryParams]="{level: 4 }">hsk4</a>
-        <a mat-menu-item [routerLink]="['hsk1']" [queryParams]="{level: 5 }">hsk5</a>
-        <a mat-menu-item [routerLink]="['hsk1']" [queryParams]="{level: 6 }">hsk6</a>
+        
+        <a class="menu-text" mat-menu-item [routerLink]="['about']">About</a>
+        
+        <a class="menu-text" mat-menu-item [routerLink]="['hsk1']" [queryParams]="{level: 1 }">hsk1</a>
+        <a class="menu-text" mat-menu-item [routerLink]="['hsk1']" [queryParams]="{level: 2 }">hsk2</a>
+        <a class="menu-text" mat-menu-item [routerLink]="['hsk1']" [queryParams]="{level: 3 }">hsk3</a>
+        <a class="menu-text" mat-menu-item [routerLink]="['hsk1']" [queryParams]="{level: 4 }">hsk4</a>
+        <a class="menu-text" mat-menu-item [routerLink]="['hsk1']" [queryParams]="{level: 5 }">hsk5</a>
+        <a class="menu-text" mat-menu-item [routerLink]="['hsk1']" [queryParams]="{level: 6 }">hsk6</a>
+        <a  class="menu-text" mat-menu-item >Close</a>
       </mat-menu>
       <!-- <mat-spinner *ngIf="apps.loading" [diameter]="30"></mat-spinner> -->
 </mat-toolbar>
@@ -26,17 +30,4 @@
 </div>
 
 <router-outlet></router-outlet>
- <!-- <select #selectElem (change)="setNewlevel(selectElem.value)">
-    <option *ngFor="let i of levels" >{{i.name}}</option>
-</select>  -->
-<!-- <ol>
-  <li *ngFor="let h of hsk1">
-    <label>Hanzi:</label>{{h.Hanzi}}<br>
-    <label>Pinyin:</label>{{h.Pinyin}}<br>
-    <label>Definition:</label>{{h.Definition}}
-
-  </li>
-</ol> -->
-  <!-- <a [routerLink]="['hsk1']">hsk1</a> -->
-
 

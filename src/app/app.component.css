@@ -31,3 +31,6 @@ button.menu.mat-raised-button {
   position: absolute;
   right: 15px;
 }
+.menu-text{
+    text-align: center;
+}

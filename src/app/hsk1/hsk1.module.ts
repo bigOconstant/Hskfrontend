@@ -8,7 +8,7 @@ import {MatGridListModule,
         MatProgressSpinnerModule,
         MatTableModule,MatCardModule,
         MatButtonModule,MatPaginatorModule,
-        MatTabsModule} from '@angular/material';
+        MatTabsModule,MatToolbarModule} from '@angular/material';
 import { WordListComponent } from './word-list/word-list.component';
 import { HskLandingComponent } from './hsk-landing/hsk-landing.component';
 import {ChangeDetectorRef } from '@angular/core';
@@ -27,7 +27,8 @@ import {CsvService} from 'angular2-json2csv';
     MatTabsModule,
     MatTableModule,
     MatPaginatorModule,
-    MatDialogModule
+    MatDialogModule,
+    MatToolbarModule
   ],
 
   declarations: [VocabularyComponent, WordListComponent, HskLandingComponent, HskDialogComponent],

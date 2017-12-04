@@ -15,3 +15,8 @@
   h2,h3,p,label{
     font-family: roboto;
   }
+
+  .tool-bar {
+    width: 100%;
+    text-align: center;
+}
