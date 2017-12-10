@@ -12,3 +12,14 @@ export interface CEDICTWITHSIZE {
 
 
 }
+
+export class Search {
+	constructor(){
+		this.Page = 0;
+		this.PageSize = 0;
+		this.Search = "";
+	}
+	Page:number
+	PageSize:number
+	Search:string
+}

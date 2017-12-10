@@ -2,12 +2,15 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {hsk} from '../../models/hsk';
 import {appService} from '../../app.service';
+import {ServiceUrl}from '../../models/ServiceUrl'
 
 
 @Injectable()
 
 export class hskService{
+    serviceUrl:ServiceUrl;
     constructor(private http: HttpClient,private appS: appService){
+        this.serviceUrl = new ServiceUrl();
     }
 
      getHsks(level:string){
@@ -17,9 +20,11 @@ export class hskService{
         this.appS.setLoading(val);
         
     }
-    getPagedHsk(level:string,pageSize:number,page:number){
-        return this.appS.getPagedHsk(level,pageSize,page);
-   }
+
+   getPagedHsk(level:string,pageSize:number,page:number){
+    this.setLoading(true);
+   return this.http.get<hsk[]>(this.serviceUrl.url+'/pagedHsk?hskLevel='+level+"&page="+page+"&pageSize="+pageSize);
+}
 
 
 }

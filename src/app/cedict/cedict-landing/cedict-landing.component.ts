@@ -1,7 +1,8 @@
-import { Component, OnInit ,Input,ViewChild } from '@angular/core';
+import { Component, OnInit ,Input,ViewChild, } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import {MatTableModule} from '@angular/material';
 import {CEDICT} from '../../models/cedict';
-import {CEDICTWITHSIZE} from '../../models/cedict';
+import {CEDICTWITHSIZE,Search} from '../../models/cedict';
 import { ActivatedRoute, Router } from '@angular/router';
 import 'rxjs/add/operator/filter';
 import {DataSource} from '@angular/cdk/collections';
@@ -10,6 +11,7 @@ import 'rxjs/add/observable/of';
 import {MatPaginator,PageEvent,MatToolbarModule,MatCardModule} from '@angular/material';
 import {cedictService} from './cedictService';
 import {CsvService} from 'angular2-json2csv';
+
 
 @Component({
   selector: 'app-cedict-landing',
@@ -23,6 +25,12 @@ export class CedictLandingComponent implements OnInit {
   cedictwithsize:CEDICTWITHSIZE;
   pageEvent: PageEvent;
   pagelength:number;
+  searchString:string;
+  searchStringCopy:string;
+  searchObject:Search;
+  searching:boolean;
+  clickedSearch:boolean;
+  searchResultsShown:boolean;
 
   length:number;
   pageIndex:number;
@@ -30,9 +38,54 @@ export class CedictLandingComponent implements OnInit {
   dataSource:cedictDataSource;
   displayedColumns = ['Traditional','Simplified', 'pinyin', 'definition'];
   constructor(public cedictService:cedictService) {
-    
+    this.searchString = "";
+    this.searchObject = new Search();
+    this.searching = false;
+    this.clickedSearch = false;
+    this.searchResultsShown = false;
+    this.searchStringCopy = "";
    }
 
+   cancelSearch(){
+     this.clickedSearch = !this.clickedSearch;
+   }
+
+   clearSearch(){
+    this.pageIndex = 0;
+    this.searchResultsShown = false;
+    this.searchString =  "";
+    this.searchStringCopy = "";
+    this.searching = false;
+    this.searchObject.Page = 0;
+    this.clickedSearch = false;
+    this.loadData();
+   }
+
+
+   callSearchCedict(){
+     this.searchResultsShown = true;
+    this.clickedSearch = false;
+    this.pageIndex = 0;
+    this.searching = true;
+    this.searchObject.Page = 0;
+    this.SearchCedict();
+
+   }
+
+   SearchCedict(){
+     
+     this.searchObject = new Search();
+     this.searchObject.Page = this.pageIndex;
+     this.searchObject.PageSize = this.pageSize;
+     this.searchObject.Search = this.searchString;
+     this.cedictService.getPagedSearchCedict(this.searchObject).subscribe(data => setTimeout(() =>{
+      this.cedictwithsize = data;
+      this.length = this.cedictwithsize.Size;
+      this.cedictService.setLoading(false);
+      this.searchStringCopy = this.searchString;
+      this.dataSource = new cedictDataSource(this.cedictwithsize.Data,this.paginator);
+     },0));
+  }
 
 
   loadData(){
@@ -47,7 +100,13 @@ export class CedictLandingComponent implements OnInit {
   handlePageEvent(event?:PageEvent){
     this.pageIndex = event.pageIndex;
     this.pageSize = event.pageSize;
+
+    if(!this.searching){
     this.loadData();
+    }else{
+      this.searchObject.Page = event.pageIndex;
+      this.SearchCedict();
+    }
 
   }
 

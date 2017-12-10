@@ -2,3 +2,19 @@
     width: 100%;
     text-align: center;
 }
+
+.search-input{
+    background-color: white;
+    margin-right:4px;
+    color:black;
+}
+.tool-bar{
+    margin-top:7px;
+}
+
+.close{
+    font-size: 1.5em;
+}
+.back-button{
+    font-size:1.5em;
+}

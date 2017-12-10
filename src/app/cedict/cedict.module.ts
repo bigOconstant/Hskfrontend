@@ -3,12 +3,15 @@ import { CommonModule } from '@angular/common';
 import {cedictService} from './cedict-landing/cedictService'
 import { CedictLandingComponent } from './cedict-landing/cedict-landing.component';
 import {cedictrouting} from './cedict.routing';
+import { FormsModule } from '@angular/forms';
 
 import {MatGridListModule,
   MatProgressSpinnerModule,
-  MatTableModule,MatCardModule,
+  MatTableModule,
+  MatIconModule,
+  MatCardModule,
   MatButtonModule,MatPaginatorModule,
-  MatTabsModule,MatToolbarModule} from '@angular/material';
+  MatTabsModule,MatToolbarModule,MatInputModule} from '@angular/material';
 
 @NgModule({
   imports: [
@@ -22,7 +25,10 @@ import {MatGridListModule,
     MatTabsModule,
     MatTableModule,
     MatPaginatorModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatInputModule,
+    FormsModule,
+    MatIconModule
     
   ],
   declarations: [CedictLandingComponent],

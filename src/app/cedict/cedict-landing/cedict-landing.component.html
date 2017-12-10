@@ -1,5 +1,17 @@
-<h1></h1>
-<mat-toolbar><div class="tool-bar">Chinese English Dictonary</div></mat-toolbar>
+
+
+<mat-toolbar class="tool-bar" *ngIf="clickedSearch" >
+  <button (click)="cancelSearch()" class="back-button" mat-button>&times;</button>
+     <input (keyup.enter)="callSearchCedict()" class="search-input" matInput [(ngModel)]="searchString" placeholder="Search Cedict" ><button (click)="callSearchCedict()"  mat-raised-button color="primary"> Search</button>
+  </mat-toolbar>
+
+  <mat-toolbar class="tool-bar" *ngIf="!clickedSearch" >
+  
+    <button mat-button (click)="clickedSearch = !clickedSearch"><mat-icon>search</mat-icon></button>
+    <span class="tool-bar" >Chinese English Dictonary</span>
+    <button *ngIf="searchResultsShown" title="Clear Search" class="close" (click)="clearSearch()" mat-button>&times;</button>
+ </mat-toolbar>
+
 
 <mat-paginator #paginator
 [length]="length"
@@ -7,15 +19,14 @@
 [pageSize]="pageSize"
 [pageSizeOptions]="[5, 10, 25, 100]"
 (page)="handlePageEvent($event)">
-<button>Test</button>
+
 </mat-paginator>
+<form class="example-form">
+
 
 <mat-table #table [dataSource]="dataSource">
   
-      <!--- Note that these columns can be defined in any order.
-            The actual rendered columns are set as a property on the row definition" -->
-  
-      <!-- Position Column -->
+    
       <ng-container matColumnDef="Traditional">
         <mat-header-cell *matHeaderCellDef> Traditional </mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.Traditional}} </mat-cell>
@@ -45,7 +56,7 @@
       <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
     </mat-table>
 
-    <mat-card>{{length}} Entries Powered By Cedict</mat-card>
+    <mat-card>{{length}} Entries <span *ngIf="searchString !== '' && searching === true" >Of Search "{{searchStringCopy}}"</span> Powered By Cedict</mat-card>
 
 
 
