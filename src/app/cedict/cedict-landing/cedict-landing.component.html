@@ -19,7 +19,7 @@
   
     <a class="search" (click)="clickedSearch = !clickedSearch"><mat-icon>search</mat-icon></a>
     <span class="tool-bar" >Chinese English Dictonary</span>
-    <button *ngIf="searchResultsShown" title="Clear Search" class="close" (click)="clearSearch()" mat-button>&times;</button>
+    <a *ngIf="searchResultsShown" title="Clear Search" class="close" (click)="clearSearch()" >&times;</a>
 
 
  </mat-toolbar>
