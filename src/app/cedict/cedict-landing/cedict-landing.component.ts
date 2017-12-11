@@ -83,7 +83,7 @@ export class CedictLandingComponent implements OnInit {
      this.searchObject = new Search();
      this.searchObject.Page = this.pageIndex;
      this.searchObject.PageSize = this.pageSize;
-     this.searchObject.Search = this.searchString;
+     this.searchObject.Search = this.searchString.toLowerCase();
      this.cedictService.getPagedSearchCedict(this.searchObject).subscribe(data => setTimeout(() =>{
       this.cedictwithsize = data;
       this.length = this.cedictwithsize.Size;
