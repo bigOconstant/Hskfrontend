@@ -31,12 +31,15 @@ export class CedictLandingComponent implements OnInit {
   searching:boolean;
   clickedSearch:boolean;
   searchResultsShown:boolean;
+  simplifiedShown:boolean;
+  select:any[];
+  selected:any;
 
   length:number;
   pageIndex:number;
   pageSize:number;
   dataSource:cedictDataSource;
-  displayedColumns = ['Traditional','Simplified', 'pinyin', 'definition'];
+  displayedColumns = ['hanzi', 'pinyin', 'definition'];
   constructor(public cedictService:cedictService) {
     this.searchString = "";
     this.searchObject = new Search();
@@ -44,6 +47,9 @@ export class CedictLandingComponent implements OnInit {
     this.clickedSearch = false;
     this.searchResultsShown = false;
     this.searchStringCopy = "";
+    this.simplifiedShown = true;
+    this.select = [{value:'Simplified',viewValue:"Simplified"},{value:"Traditional",viewValue:"Traditional"}];
+    this.selected = this.select[0].value;
    }
 
    cancelSearch(){

@@ -1,18 +1,39 @@
 
 
-<mat-toolbar class="tool-bar" *ngIf="clickedSearch" >
-  <button (click)="cancelSearch()" class="back-button" mat-button>&times;</button>
+
+<div class="tool-bar-top"> </div>
+
+
+<mat-toolbar  *ngIf="clickedSearch" >
+  <a (click)="cancelSearch()" class="back-button" >&times;</a>
      <input (keyup.enter)="callSearchCedict()" class="search-input" matInput [(ngModel)]="searchString" placeholder="Search Cedict" ><button (click)="callSearchCedict()"  mat-raised-button color="primary"> Search</button>
-  </mat-toolbar>
+  
+     
+  
+    </mat-toolbar>
+
+
+
 
   <mat-toolbar class="tool-bar" *ngIf="!clickedSearch" >
   
-    <button mat-button (click)="clickedSearch = !clickedSearch"><mat-icon>search</mat-icon></button>
+    <a class="search" (click)="clickedSearch = !clickedSearch"><mat-icon>search</mat-icon></a>
     <span class="tool-bar" >Chinese English Dictonary</span>
     <button *ngIf="searchResultsShown" title="Clear Search" class="close" (click)="clearSearch()" mat-button>&times;</button>
+
+
  </mat-toolbar>
+   <!-- <mat-card>
+      <mat-select  [(ngModel)]="selected" class="Form-field" placeholder="Hanzi Type">
+          <mat-option  *ngFor="let val of select" [value]="val.value">
+            <span >{{ val.viewValue }}</span>
+          </mat-option>
+        </mat-select>
+       
+        
+    </mat-card> -->
 
-
+ <div class="table-container mat-elevation-z8">
 <mat-paginator #paginator
 [length]="length"
 [pageIndex]="pageIndex"
@@ -21,19 +42,16 @@
 (page)="handlePageEvent($event)">
 
 </mat-paginator>
-<form class="example-form">
+
 
 
 <mat-table #table [dataSource]="dataSource">
   
-    
-      <ng-container matColumnDef="Traditional">
-        <mat-header-cell *matHeaderCellDef> Traditional </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.Traditional}} </mat-cell>
-      </ng-container>
+ 
 
-      <ng-container matColumnDef="Simplified">
-        <mat-header-cell *matHeaderCellDef> Simplified </mat-header-cell>
+
+      <ng-container matColumnDef="hanzi">
+        <mat-header-cell *matHeaderCellDef> Hanzi </mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.Simplified}} </mat-cell>
       </ng-container>
   
@@ -56,7 +74,17 @@
       <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
     </mat-table>
 
-    <mat-card>{{length}} Entries <span *ngIf="searchString !== '' && searching === true" >Of Search "{{searchStringCopy}}"</span> Powered By Cedict</mat-card>
+    <mat-card>{{length}} Entries <span *ngIf="searchString !== '' && searching === true" >Of Search "{{searchStringCopy}}"</span> Powered By Cedict
+    </mat-card>
+    <!-- <mat-card>
+      <mat-select  [(ngModel)]="selected" class="Form-field" placeholder="Hanzi Type">
+          <mat-option  *ngFor="let val of select" [value]="val.value">
+            <span >{{ val.viewValue }}</span>
+          </mat-option>
+        </mat-select>
+       
+        
+    </mat-card> -->
 
 
-
+  </div>

@@ -1,6 +1,6 @@
-.tool-bar {
-    width: 100%;
-    text-align: center;
+.tool-bar-top {
+   margin-top:30px;
+    
 }
 
 .search-input{
@@ -9,12 +9,41 @@
     color:black;
 }
 .tool-bar{
-    margin-top:7px;
+    width:100%;
+    text-align: center;
 }
 
 .close{
     font-size: 1.5em;
 }
-.back-button{
+.back-button {
     font-size:1.5em;
+    margin-right:10px;
+    cursor:pointer;
 }
+
+.search{
+    margin-right:10px;
+    cursor:pointer;
+    margin-top:8px;
+}
+.table-container {
+    display: flex;
+    flex-direction: column;
+    max-height: 800px;
+    /* min-width: 400px; */
+  }
+
+  .mat-table {
+    overflow: auto;
+    max-height: 400px;
+  }
+
+  .Form-field{
+     
+      color:black;
+     
+  }
+  .small{
+      height: 10px;
+  }

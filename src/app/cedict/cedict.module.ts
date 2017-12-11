@@ -10,12 +10,15 @@ import {MatGridListModule,
   MatTableModule,
   MatIconModule,
   MatCardModule,
-  MatButtonModule,MatPaginatorModule,
+  MatButtonModule,
+  MatSelectModule,
+  MatPaginatorModule,
   MatTabsModule,MatToolbarModule,MatInputModule} from '@angular/material';
 
 @NgModule({
   imports: [
     CommonModule,
+    MatSelectModule,
     cedictrouting,
     MatPaginatorModule,
     MatGridListModule,
