@@ -37,7 +37,7 @@ export class HomeComponent implements OnInit {
 
   onResize(event) {
     var width = event.target.innerWidth;
-
+  console.log("Resizing width:"+width);
 
 
     //this.setColumns();

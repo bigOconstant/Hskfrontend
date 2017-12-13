@@ -1,18 +1,25 @@
 
 
-
+<div (window:resize)="onResize($event)">
 <div class="tool-bar-top"> </div>
 
 
-<mat-toolbar  *ngIf="clickedSearch" >
-  <a (click)="cancelSearch()" class="back-button" >&times;</a>
-     <input (keyup.enter)="callSearchCedict()" class="search-input" matInput [(ngModel)]="searchString" placeholder="Search Cedict" ><button (click)="callSearchCedict()"  mat-raised-button color="primary"> Search</button>
+<mat-toolbar class="common-toolbar"  *ngIf="clickedSearch" >
+  <a matTooltip="Back" (click)="cancelSearch()" class="back-button" >&times;</a>
+
+     
+     <input (keyup.enter)="callSearchCedict()" class="search-input" matInput [(ngModel)]="searchString" placeholder="Search Cedict" >
+    
+    
+    
+     <button (click)="callSearchCedict()"  mat-raised-button color="primary"> Search</button>
+     
     </mat-toolbar>
 
-  <mat-toolbar class="tool-bar" *ngIf="!clickedSearch" >
-    <a class="search" (click)="clickedSearch = !clickedSearch"><mat-icon>search</mat-icon></a>
-    <span class="tool-bar" >Chinese English Dictionary</span>
-    <a *ngIf="searchResultsShown" title="Clear Search" class="close" (click)="clearSearch()" >&times;</a>
+  <mat-toolbar class="tool-bar common-toolbar" *ngIf="!clickedSearch" >
+    <a matTooltip="Search" class="search" (click)="clickedSearch = !clickedSearch"><mat-icon>search</mat-icon></a>
+    <span class="tool-bar" ><span *ngIf="width > 420">Chinese English</span> Dictionary <span matTooltip="Search Help" class="inner-span"><a (click)="openDialog()"><mat-icon class="help-icon">help_outline</mat-icon></a></span></span>
+    <a *ngIf="searchResultsShown" matTooltip="Clear Search" class="close" (click)="clearSearch()" >&times;</a>
  </mat-toolbar>
 
 
@@ -57,3 +64,4 @@
     <button  *ngIf="!simplifiedShown" (click)="switchCharacterSet()" mat-raised-button color="primary">Switch to Simplified</button>
 
   </div>
+</div>

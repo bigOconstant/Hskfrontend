@@ -11,8 +11,8 @@ import 'rxjs/add/observable/of';
 import {MatPaginator,PageEvent,MatToolbarModule,MatCardModule} from '@angular/material';
 import {cedictService} from './cedictService';
 import {CsvService} from 'angular2-json2csv';
-
-
+import {CedictDialogComponent} from '../cedict-dialog/cedict-dialog.component';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 @Component({
   selector: 'app-cedict-landing',
   templateUrl: './cedict-landing.component.html',
@@ -34,13 +34,14 @@ export class CedictLandingComponent implements OnInit {
   simplifiedShown:boolean;
   select:any[];
   selected:any;
-
+  result:string;
+  width:number;
   length:number;
   pageIndex:number;
   pageSize:number;
   dataSource:cedictDataSource;
   displayedColumns = ['hanzi', 'pinyin', 'definition'];
-  constructor(public cedictService:cedictService) {
+  constructor(public cedictService:cedictService,public dialog: MatDialog) {
     this.searchString = "";
     this.searchObject = new Search();
     this.searching = false;
@@ -50,7 +51,22 @@ export class CedictLandingComponent implements OnInit {
     this.simplifiedShown = true;
     this.select = [{value:'Simplified',viewValue:"Simplified"},{value:"Traditional",viewValue:"Traditional"}];
     this.selected = this.select[0].value;
+    this.width = window.innerWidth;
    }
+   onResize(event) {
+    this.width = event.target.innerWidth;
+   }
+
+   openDialog(): void {
+    let dialogRef = this.dialog.open(CedictDialogComponent, {
+      width: '260px'
+      
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      this.result = result;
+    });
+  }
 
    cancelSearch(){
      this.clickedSearch = !this.clickedSearch;

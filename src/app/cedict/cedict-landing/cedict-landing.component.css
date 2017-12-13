@@ -7,6 +7,7 @@
     background-color: white;
     margin-right:4px;
     color:black;
+    border-radius: 3px;
 }
 .tool-bar{
     width:100%;
@@ -48,3 +49,22 @@
   .small{
       height: 10px;
   }
+
+  .help{
+      /* width:40px;
+      height:38px; */
+      background-color: #424242;
+      /* margin-right:3px; */
+  }
+ .common-toolbar{
+     height: 70px;
+ }
+ .example-full-width{
+     width:100%;
+ }
+ .help-icon{
+    position: relative;
+    top: 3px;
+    font-size: 20px;
+    cursor:pointer;
+ }
