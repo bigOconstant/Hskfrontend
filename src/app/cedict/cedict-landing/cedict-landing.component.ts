@@ -78,6 +78,16 @@ export class CedictLandingComponent implements OnInit {
 
    }
 
+   switchCharacterSet(){
+    this.simplifiedShown = !this.simplifiedShown;
+    if(this.searching){
+    this.SearchCedict();
+    }else{
+      this.loadData();
+    }
+
+   }
+
    SearchCedict(){
      
      this.searchObject = new Search();

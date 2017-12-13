@@ -50,10 +50,15 @@
  
 
 
-      <ng-container matColumnDef="hanzi">
+      <ng-container *ngIf="simplifiedShown" matColumnDef="hanzi">
         <mat-header-cell *matHeaderCellDef> Hanzi </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.Simplified}} </mat-cell>
+        <mat-cell  *matCellDef="let element"> {{element.Simplified}} </mat-cell>
       </ng-container>
+
+      <ng-container *ngIf="!simplifiedShown" matColumnDef="hanzi">
+          <mat-header-cell *matHeaderCellDef> Hanzi </mat-header-cell>
+          <mat-cell  *matCellDef="let element"> {{element.Traditional}} </mat-cell>
+        </ng-container>
   
       
       <!-- Name Column -->
@@ -76,6 +81,8 @@
 
     <mat-card>{{length}} Entries <span *ngIf="searchString !== '' && searching === true" >Of Search "{{searchStringCopy}}"</span> Powered By Cedict
     </mat-card>
+    <button  *ngIf="simplifiedShown" (click)="switchCharacterSet()" mat-raised-button color="primary">Switch to Traditional</button>
+    <button  *ngIf="!simplifiedShown" (click)="switchCharacterSet()" mat-raised-button color="primary">Switch to Simplified</button>
     <!-- <mat-card>
       <mat-select  [(ngModel)]="selected" class="Form-field" placeholder="Hanzi Type">
           <mat-option  *ngFor="let val of select" [value]="val.value">

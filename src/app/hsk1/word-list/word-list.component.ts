@@ -70,7 +70,8 @@ export class WordListComponent implements OnInit {
   loadData(){
 
    
- 
+   //this.paginator.pageSize = this.pageSize;
+
     this.hsk1Service.getPagedHsk(this.level,this.paginator.pageSize,this.paginator.pageIndex+1).subscribe(data => setTimeout(() =>{
       this.hsk1 = data;
       this.hsk1Service.setLoading(false);

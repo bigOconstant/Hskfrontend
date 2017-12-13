@@ -46,3 +46,6 @@ mat-grid-tile {
     left: 3px;
     top: -16px;
   }
+  .clickable{
+    cursor:pointer;
+  }
