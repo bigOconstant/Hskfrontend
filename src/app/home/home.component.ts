@@ -68,12 +68,11 @@ export class HomeComponent implements OnInit {
     this.homeLinks.push(new HomeLink("HSK4","/hsk1?level=","Intermediate Mandarin. 600 words","4"));
     this.homeLinks.push(new HomeLink("HSK5","/hsk1?level=","Advanced Mandarin. 1300 words","5"));
     this.homeLinks.push(new HomeLink("HSK6","/hsk1?level=","Advanced Mandarin. 2500 words","6"));
-    this.homeLinks.push(new HomeLink("Chinese English Dictonary","/cedict","Browse all Chinese words like ever",""));
+    this.homeLinks.push(new HomeLink("Chinese English Dictionary","/cedict","Browse Most Chinese Words and Phrases",""));
 
   }
 
 }
-
 
 export class HomeLink{
   title:string;
