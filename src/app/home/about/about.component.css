@@ -66,6 +66,7 @@ header{
     height: 80px;
     text-align: center;
     font-size: 3.2em;
+    margin-top:20px;
    
     
    
@@ -118,6 +119,7 @@ header{
 .search-icon{
     font-size: 3em;
     color:#666;
+    margin-right:20px;
 }
 footer{
     clear:both;
