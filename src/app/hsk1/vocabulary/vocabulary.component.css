@@ -4,6 +4,7 @@ h2,p,label{
 
 h2,h3{
   text-align: center;
+  color:#666;
 }
 mat-grid-tile {
     background: lightblue;

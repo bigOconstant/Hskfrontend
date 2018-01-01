@@ -6,6 +6,7 @@
   }
   h2,h3{
     text-align: center;
+    color:#666;
   }
   .mat-table {
     overflow: auto;

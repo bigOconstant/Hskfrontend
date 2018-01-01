@@ -1,4 +1,23 @@
-<div class="card-author">
+
+<div class="main-div">
+<header class="mat-elevation-z6">
+
+  <div class="header-section">
+    <h1>HSK Hanyu</h1>
+    <h2>Learn Chinese Anywhere</h2>
+  </div>
+
+  <div class="lower-section">
+  
+    <!-- <button>Get Started</button> -->
+    <button [routerLink]="['home']" class="center-button mat-elevation-z6" mat-button>Get Started</button>
+
+
+  </div>
+</header>
+
+
+<!-- <div class="card-author">
 <mat-card class="about-card">
   <mat-card-header>
     <div mat-card-avatar class="header-image"></div>
@@ -15,4 +34,47 @@
     <a class="email-button" href="mailto:caleb.a.mccarthy@gmail.com" mat-raised-button>caleb.a.mccarthy@gmail.com</a>
   </mat-card-actions>
 </mat-card>
+</div> -->
+<div class="wrapper">
+<div class="section-two">
+
+
+<div>
+    
+        <div class="flash-tile" >
+          <div [routerLink]="['home']" class="flash-card mat-elevation-z6">中</div>
+        </div>
+       
+          <div class="label-heading">
+            <h3>HSK Flash Cards</h3>
+            <p class="discription">Study flash cards for words most likely needed for each HSK level</p>
+          </div>
+       
+        <!-- <mat-grid-tile colspan="2">
+            <h2 class="lower-heading">Dictionary</h2>
+        </mat-grid-tile> -->
+        
+     
+       <div class="section-three">
+            <div class="label-heading-two">
+                <h3>Chinese English Dictonary</h3>
+                <p class="discription">Browse and Search one of the largest Chinese Translation Dictonaries</p>
+              </div>
+        
+              <div class="search-tile"><a [routerLink]="['cedict']"><mat-icon class="search-icon">search</mat-icon></a></div>
+            </div>
+
 </div>
+</div>
+<div class="push"></div>
+</div>
+
+
+
+</div>
+
+ 
+
+
+
+

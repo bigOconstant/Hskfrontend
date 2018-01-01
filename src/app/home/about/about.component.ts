@@ -12,4 +12,8 @@ export class AboutComponent implements OnInit {
   ngOnInit() {
   }
 
+  takeMeHome(){
+    console.log("Clicked Get Started")
+  }
+
 }

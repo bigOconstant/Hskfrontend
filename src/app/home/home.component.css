@@ -2,6 +2,7 @@
   height: 100px;
   width:300px;
   cursor:pointer;
+  color:rgba(255,255,255,.7);
 }
 
 .box-container{
@@ -12,4 +13,5 @@
 h1,h2{
   font-family: roboto;
   text-align: center;
+  color:#666; 
 }

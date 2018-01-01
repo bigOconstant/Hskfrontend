@@ -11,3 +11,149 @@
     margin-right:3px;
     width:99%;
 }
+
+h1,h2,h3,p,label{
+    font-family: roboto;
+  }
+h1,h2{
+    text-align: center;
+   
+}
+h1{
+    padding-top:60px;
+}
+
+
+.lower-section{
+    /* padding-top:4em;
+    margin-bottom: 2em; */
+   text-align: center;
+}
+.header-section{
+    /* margin-top:4em; */
+}
+header{
+    height: 340px;
+    background-color: #393939;
+    margin-top:-22px;
+    width:102%;
+    margin-left: -8px;
+    color:rgba(255,255,255,.7);
+}
+.center-button{
+    margin-top:40px
+}
+.lower-heading{
+    margin-top:60px;
+  color:#666;
+}
+.section-two{
+    max-width:800px;
+    margin:auto;
+    padding-top:60px;
+    margin-bottom: 100px;
+    clear:both;
+}
+.section-three{
+    max-width:800px;
+    margin:auto;
+   
+}
+.flash-card{
+    background-color: #393939;
+    color:rgba(255,255,255,.7);
+    width:80px;
+    height: 80px;
+    text-align: center;
+    font-size: 3.2em;
+   
+    
+   
+    
+    
+}
+.flash-tile{
+   
+  width:50%;
+  float:left;
+  cursor:pointer;
+}
+.label-heading{
+    width:50%;
+    color:#666; 
+    float:right;
+    
+    
+}
+.discription{
+    color:#666;
+}
+.flash-tile{
+
+}
+.break{
+    min-height: 40px;
+}
+.label-heading-two{
+    padding-top: 200px;
+    color:#666; 
+    width:50%;
+    float:left;
+}
+.search-tile{
+    padding-top: 200px;
+    width:50%;
+    float:right;
+    text-align: right;
+    
+    
+}
+/* .mat-toolbar .mat-toolbar-row{
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2),0 6px 10px 0 rgba(0,0,0,.14),0 1px 18px 0 rgba(0,0,0,.12);
+} */
+
+.section-three{
+   
+}
+.search-icon{
+    font-size: 3em;
+    color:#666;
+}
+footer{
+    clear:both;
+    margin-top:200px;
+    background-color: #393939;
+    width:102%;
+    margin-left: -8px;
+    height: 60px;
+    position: absolute;
+    bottom:0;
+  
+ 
+}
+.footer-text{
+    font-family: roboto;
+    color:rgba(255,255,255,.7);
+    text-align: right;
+    font-size:.8em;
+    margin-right:80px;
+    padding-top:19px;
+}
+
+.copyright{
+    font-size:.85em;
+}
+.wrapper{
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -60px;
+}
+footer, .push {
+    height: 60px; /* .push must be the same height as .footer */
+}
+
+.main-div{
+    position: relative;
+    min-height: 1000px
+}

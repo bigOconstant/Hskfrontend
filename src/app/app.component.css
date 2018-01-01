@@ -34,3 +34,32 @@ button.menu.mat-raised-button {
 .menu-text{
     text-align: center;
 }
+.footer-text{
+    font-family: roboto;
+    color:rgba(255,255,255,.7);
+    text-align: right;
+    font-size:.8em;
+    margin-right:80px;
+    padding-top:19px;
+}
+.all-content{
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -142px;
+}
+footer{
+   
+    margin-top:200px;
+    background-color: #393939;
+    width:102%;
+    margin-left: -8px;
+    height: 60px;
+
+}
+footer, .push {
+    height: 60px; /* .push must be the same height as .footer */
+}
+.copyright{
+    font-size:.85em;
+}

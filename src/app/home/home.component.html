@@ -6,9 +6,9 @@
 
   <div class="row" *ngFor="let h of homeLinks;let i = index">
 
-  <mat-grid-tile (click)="navigate(h)">
+  <mat-grid-tile  (click)="navigate(h)">
     <!-- {{h.title}} -->
-    <mat-card class="hsk-card">
+    <mat-card class="hsk-card mat-elevation-z6">
       <mat-card-header>
         <div mat-card-avatar class="example-header-image"></div>
         <mat-card-title>{{h.title}}</mat-card-title>

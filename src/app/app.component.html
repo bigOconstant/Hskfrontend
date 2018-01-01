@@ -1,16 +1,17 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<mat-toolbar>
+<div class="all-content">
+<mat-toolbar class="mat-elevation-z10">
 
 
     <button class="menu" mat-raised-button [matMenuTriggerFor]="menu"> <mat-icon>menu</mat-icon></button>
     <button mat-button [routerLink]="['']"><mat-icon>home</mat-icon></button>
     <mat-menu #menu="matMenu">
-      <a class="menu-text" mat-menu-item [routerLink]="['']">Home</a>
+      <a class="menu-text" mat-menu-item [routerLink]="['home']">Home</a>
       <a class="menu-text" mat-menu-item [routerLink]="['cedict']">Dictionary</a>
       
 
         
-        <a class="menu-text" mat-menu-item [routerLink]="['about']">About</a>
+        <a class="menu-text" mat-menu-item [routerLink]="['']">About</a>
         
         <a class="menu-text" mat-menu-item [routerLink]="['hsk1']" [queryParams]="{level: 1 }">hsk1</a>
         <a class="menu-text" mat-menu-item [routerLink]="['hsk1']" [queryParams]="{level: 2 }">hsk2</a>
@@ -22,6 +23,7 @@
       </mat-menu>
       <!-- <mat-spinner *ngIf="apps.loading" [diameter]="30"></mat-spinner> -->
 </mat-toolbar>
+
 <mat-progress-bar *ngIf="apps.loading"  mode="indeterminate"></mat-progress-bar>
 
 <div style="text-align:center">
@@ -30,4 +32,11 @@
 </div>
 
 <router-outlet></router-outlet>
+<div class="push"></div>
+</div>
+<!-- <footer>
+    <div class="footer-text">
+        <mat-icon class="copyright">copyright</mat-icon>Copyright 2017 Caleb McCarthy
+    </div>
+  </footer> -->
 
