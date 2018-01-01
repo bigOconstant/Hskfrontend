@@ -46,20 +46,26 @@ button.menu.mat-raised-button {
     min-height: 100%;
     height: auto !important;
     height: 100%;
-    margin: 0 auto -142px;
+    margin-bottom:40px;
+
 }
 footer{
    
-    margin-top:200px;
+  
     background-color: #393939;
     width:102%;
-    margin-left: -8px;
+   
+
+
+    display:block;
+    margin-top:60px;
     height: 60px;
+    clear: both;
+    bottom: 0;
+ 
 
 }
-footer, .push {
-    height: 60px; /* .push must be the same height as .footer */
-}
+
 .copyright{
     font-size:.85em;
 }
