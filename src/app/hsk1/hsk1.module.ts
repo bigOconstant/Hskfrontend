@@ -15,6 +15,7 @@ import {ChangeDetectorRef } from '@angular/core';
 import {MatDialogModule} from '@angular/material/dialog';
 import { HskDialogComponent } from './hsk-dialog/hsk-dialog.component';
 import {CsvService} from 'angular2-json2csv';
+import { HskHomeComponent } from './hsk-home/hsk-home.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -31,7 +32,7 @@ import {CsvService} from 'angular2-json2csv';
     MatToolbarModule
   ],
 
-  declarations: [VocabularyComponent, WordListComponent, HskLandingComponent, HskDialogComponent],
+  declarations: [VocabularyComponent, WordListComponent, HskLandingComponent, HskDialogComponent, HskHomeComponent],
   providers: [hskService,CsvService],
   entryComponents: [
     HskDialogComponent,
