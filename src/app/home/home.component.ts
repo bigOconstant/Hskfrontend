@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
   setColumns(){
     var width = window.innerWidth;
     if (width > 1057) {
-      this.columns = 2;
+      this.columns = 3;
     }
     else if (width < 1057 && width> 709) {
       this.columns = 2;
@@ -40,7 +40,7 @@ export class HomeComponent implements OnInit {
 
 
     if (width > 1057) {
-      this.columns = 2;
+      this.columns = 3;
     }
     else if (width < 1057 && width> 709) {
       this.columns = 2;
@@ -61,6 +61,7 @@ export class HomeComponent implements OnInit {
     this.homeLinks = [];
     this.homeLinks.push(new HomeLink("HSK","hskHome","Study For the HSK",""));
     this.homeLinks.push(new HomeLink("Chinese English Dictionary","/cedict","Browse Most Chinese Words and Phrases",""));
+    this.homeLinks.push(new HomeLink("Chinese Lessons","/lesson1","Learn Chinese Step by Step",""));
 
   }
 
