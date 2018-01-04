@@ -3,6 +3,7 @@
     width:300px;
     cursor:pointer;
     color:rgba(255,255,255,.7);
+    font-weight: bold;
   }
   
   .box-container{
@@ -14,4 +15,8 @@
     font-family: roboto;
     text-align: center;
     color:#666; 
+    font-weight: bold;
+  }
+  .card-title{
+    font-weight: bold;
   }

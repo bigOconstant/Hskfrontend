@@ -12,6 +12,7 @@
 .tool-bar{
     width:100%;
     text-align: center;
+    color:rgba(255,255,255,.7);
 }
 
 .close{
