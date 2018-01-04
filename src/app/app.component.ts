@@ -4,6 +4,7 @@ import {appService} from './app.service';
 import {hsk} from './models/hsk';
 import {MatToolbarModule} from '@angular/material';
 import {MatButtonModule,MatMenuModule, MatCheckboxModule} from '@angular/material';
+import {Router, NavigationEnd} from "@angular/router";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
