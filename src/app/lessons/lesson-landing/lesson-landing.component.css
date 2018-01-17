@@ -1,0 +1,22 @@
+.hsk-card{
+    height: 100px;
+    width:300px;
+    cursor:pointer;
+    color:rgba(255,255,255,.7);
+    font-weight: bold;
+  }
+  
+  .box-container{
+    max-width:1600px;
+    margin: auto;
+  }
+  
+  h1,h2{
+    font-family: roboto;
+    text-align: center;
+    color:#666; 
+    font-weight: bold;
+  }
+  .card-title{
+    font-weight: bold;
+  }
