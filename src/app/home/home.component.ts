@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
     else if (width < 1057 && width> 709) {
       this.columns = 2;
     }
-    else if (width <709 ){
+    else if (width <709 ) {
       this.columns = 1;
     }
 
@@ -37,7 +37,6 @@ export class HomeComponent implements OnInit {
 
   onResize(event) {
     var width = event.target.innerWidth;
-
 
     if (width > 1057) {
       this.columns = 3;
@@ -49,9 +48,8 @@ export class HomeComponent implements OnInit {
       this.columns = 1;
     }
 
-
-
   }
+
   navigate(link:HomeLink){
     this.router.navigateByUrl(link.url+link.params);
 
@@ -61,7 +59,7 @@ export class HomeComponent implements OnInit {
     this.homeLinks = [];
     this.homeLinks.push(new HomeLink("HSK","hskHome","Study For the HSK",""));
     this.homeLinks.push(new HomeLink("Chinese English Dictionary","/cedict","Browse Most Chinese Words and Phrases",""));
-    this.homeLinks.push(new HomeLink("Chinese Lessons","/lesson1","Learn Chinese Step by Step",""));
+    this.homeLinks.push(new HomeLink("Chinese Lessons","/lessonlanding","Learn Chinese Step by Step",""));
 
   }
 
