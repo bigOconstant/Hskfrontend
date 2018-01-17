@@ -1,3 +1,30 @@
-<p>
-  lesson-landing works!
-</p>
+
+<h1>Learn Chinese</h1>
+<h2>Step By Step</h2>
+
+<mat-grid-list cols="{{columns}}" rowHeight="3:1.4" (window:resize)="onResize($event)">
+
+  <div class="row" *ngFor="let h of homeLinks;let i = index">
+
+  <mat-grid-tile  (click)="navigate(h)">
+    <!-- {{h.title}} -->
+    <mat-card class="hsk-card mat-elevation-z6">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title><span class="card-title">{{h.title}}</span></mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content>
+        <p>
+          {{h.description}}
+        </p>
+      </mat-card-content>
+
+    </mat-card>
+
+  </mat-grid-tile>
+
+    </div>
+
+   </mat-grid-list>

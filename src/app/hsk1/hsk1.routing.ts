@@ -1,7 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
 import {VocabularyComponent} from  './vocabulary/vocabulary.component';
 import { HskLandingComponent } from './hsk-landing/hsk-landing.component';
-import {HskHomeComponent} from './hsk-home/hsk-home.component'
+import {HskHomeComponent} from './hsk-home/hsk-home.component';
 const Hsk1Routes: Routes = [
     { path: 'hsk1',
       children: [
