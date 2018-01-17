@@ -59,20 +59,9 @@ header{
     margin:auto;
    
 }
-.flash-card{
-    background-color: #393939;
-    color:rgba(255,255,255,.7);
-    width:80px;
-    height: 80px;
-    text-align: center;
-    font-size: 3.2em;
-    margin-top:20px;
-   
-    
-   
-    
-    
-}
+
+
+
 .flash-tile{
    
   width:50%;
@@ -158,4 +147,22 @@ footer, .push {
 .main-div{
     position: relative;
     min-height: 1000px
+}
+
+.inner-zhong{
+    margin-top: 5px;
+    padding-top: 7px;
+    font-weight: bold;
+    font-family: roboto;
+}
+
+.flash-card{
+    background-color: #393939;
+    color:rgba(255,255,255,.7);
+    width:1.6em;
+    height: 1.6em;
+    text-align: center;
+    font-size: 3.2em;
+    margin-top:20px;  
+    
 }
