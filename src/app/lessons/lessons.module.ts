@@ -8,6 +8,7 @@ import {MatGridListModule,
   MatTableModule,MatCardModule,
   MatButtonModule,MatPaginatorModule,
   MatTabsModule,MatToolbarModule} from '@angular/material';
+import { Lesson2Component } from './lesson2/lesson2.component';
 
 @NgModule({
   imports: [
@@ -30,6 +31,6 @@ import {MatGridListModule,
     MatToolbarModule
 
   ],
-  declarations: [Lesson1Component, LessonLandingComponent]
+  declarations: [Lesson1Component, LessonLandingComponent, Lesson2Component]
 })
 export class LessonsModule { }

@@ -64,6 +64,7 @@ export class LessonLandingComponent implements OnInit {
     this.homeLinks = [];
    
     this.homeLinks.push(new HomeLink("Lesson1","/lesson1","What is Chinese, how do you write it?",""));
+    this.homeLinks.push(new HomeLink("Lesson2","/lesson2","Your First Conversation",""));
 
   }
 

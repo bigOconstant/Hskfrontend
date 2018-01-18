@@ -1,0 +1,13 @@
+.content{
+    margin-top:40px;
+    font-family: DejaVu Sans;
+    
+    color:#666; 
+    font-weight: bold;
+    max-width:800px;
+    margin-left:40px;
+}
+
+.hanzi{
+    cursor:pointer;
+}

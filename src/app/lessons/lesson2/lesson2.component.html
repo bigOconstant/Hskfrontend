@@ -1,0 +1,11 @@
+<div class="content">
+   <h2></h2> 
+  <div class="line">
+     <div *ngFor="let line of dialogList" class="hanzi">
+        <p (click)="line.flag = !line.flag">{{line.value()}}</p>
+      </div>
+     
+  </div>
+
+
+</div>
