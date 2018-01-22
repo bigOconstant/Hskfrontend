@@ -8,6 +8,8 @@ import {MatGridListModule,
   MatTableModule,MatCardModule,
   MatButtonModule,MatPaginatorModule,
   MatTabsModule,MatToolbarModule} from '@angular/material';
+  
+
 import { Lesson2Component } from './lesson2/lesson2.component';
 
 @NgModule({
@@ -16,10 +18,6 @@ import { Lesson2Component } from './lesson2/lesson2.component';
     lessonsrouting,
     MatGridListModule,
 
-
-
-
-   
 
     MatProgressSpinnerModule,
     MatCardModule,

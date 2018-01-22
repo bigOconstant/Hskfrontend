@@ -8,7 +8,7 @@ import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 import {MatPaginator,PageEvent} from '@angular/material';
 import {hskService} from '../hskCommonServices/hsk1.service';
-import {CsvService} from 'angular2-json2csv';
+//import {CsvService} from 'angular2-json2csv';
 
 
 @Component({
@@ -30,18 +30,18 @@ export class WordListComponent implements OnInit {
   pageIndex:number;
   pageSize:number;
 
-  constructor(public hsk1Service:hskService,public csvService: CsvService) {
+  constructor(public hsk1Service:hskService) {
     
     
        }
 
-       downloadExcel(){
-         this.hsk1Service.getHsks(this.level).subscribe(data => setTimeout(() =>{
-          this.csvService.download(data, "HSK_level"+this.level);
-          this.hsk1Service.setLoading(false);
+      //  downloadExcel(){
+      //    this.hsk1Service.getHsks(this.level).subscribe(data => setTimeout(() =>{
+      //     this.csvService.download(data, "HSK_level"+this.level);
+      //     this.hsk1Service.setLoading(false);
           
-        },0));
-       }
+      //   },0));
+      //  }
   setLength(level){
     switch(level){
       case "1":

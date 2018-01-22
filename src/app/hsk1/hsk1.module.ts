@@ -14,7 +14,6 @@ import { HskLandingComponent } from './hsk-landing/hsk-landing.component';
 import {ChangeDetectorRef } from '@angular/core';
 import {MatDialogModule} from '@angular/material/dialog';
 import { HskDialogComponent } from './hsk-dialog/hsk-dialog.component';
-import {CsvService} from 'angular2-json2csv';
 import { HskHomeComponent } from './hsk-home/hsk-home.component';
 @NgModule({
   imports: [
@@ -33,7 +32,7 @@ import { HskHomeComponent } from './hsk-home/hsk-home.component';
   ],
 
   declarations: [VocabularyComponent, WordListComponent, HskLandingComponent, HskDialogComponent, HskHomeComponent],
-  providers: [hskService,CsvService],
+  providers: [hskService],
   entryComponents: [
     HskDialogComponent,
   ],

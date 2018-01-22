@@ -11,3 +11,8 @@
 .hanzi{
     cursor:pointer;
 }
+h2, h3{
+    font-family: roboto;
+    color:#666;
+    text-align: center;
+}

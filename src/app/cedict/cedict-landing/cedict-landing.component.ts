@@ -10,7 +10,6 @@ import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 import {MatPaginator,PageEvent,MatToolbarModule,MatCardModule} from '@angular/material';
 import {cedictService} from './cedictService';
-import {CsvService} from 'angular2-json2csv';
 import {CedictDialogComponent} from '../cedict-dialog/cedict-dialog.component';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 @Component({
