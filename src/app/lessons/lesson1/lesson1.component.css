@@ -9,7 +9,7 @@ h1,h2,h3,p,label{
 
   .content p{
       margin:auto;
-      max-width:700px;
+      max-width:1000px;
       text-align: left;
   }
 
@@ -19,3 +19,16 @@ h1,h2,h3,p,label{
   .scale{
     margin: 0 auto;
   }
+
+  .next{
+      float:right;
+      color:rgba(255,255,255,.7);
+  }
+
+.footer{
+    
+    max-width:1000px;
+    margin:auto;
+    margin-top:12px;
+    
+}

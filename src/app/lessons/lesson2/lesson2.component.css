@@ -1,18 +1,63 @@
+.tool-bar {
+    width: 100%;
+    text-align: center;
+    color:rgba(255,255,255,.7);
+}
+
 .content{
+    margin:auto;
     margin-top:40px;
     font-family: DejaVu Sans;
-    
+    max-width:1000px;
     color:#666; 
     font-weight: bold;
-    max-width:800px;
-    margin-left:40px;
+    
+}
+.word-Section{
+  max-width:1000px;
+  margin:auto;
 }
 
 .hanzi{
     cursor:pointer;
+    color:#666;
 }
 h2, h3{
     font-family: roboto;
     color:#666;
     text-align: center;
 }
+
+.mat-divider {
+    border-top-color: #666;
+}
+.mid-section{
+    max-width:1000px;
+    margin:auto;
+    margin-bottom:20px;
+}
+iframe {
+    display: block;
+    margin: 0 auto;
+ }
+
+ .previous{
+     float:left;
+     color:rgba(255,255,255,.7);
+ }
+ .footer{
+     
+     max-width:1000px;
+     margin:auto;
+     margin-top:12px;
+     
+ }
+ .translate{
+     margin:auto;
+     color:rgba(255,255,255,.7);
+ }
+ .translate-section{
+     max-width:1000px;
+     margin:auto;
+     text-align: center;
+ }

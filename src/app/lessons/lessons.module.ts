@@ -5,10 +5,17 @@ import {lessonsrouting} from './lessons.routing';
 import { LessonLandingComponent } from './lesson-landing/lesson-landing.component';
 import {MatGridListModule,
   MatProgressSpinnerModule,
-  MatTableModule,MatCardModule,
-  MatButtonModule,MatPaginatorModule,
-  MatTabsModule,MatToolbarModule} from '@angular/material';
-  
+  MatTableModule,
+  MatCardModule,
+  MatButtonModule,
+  MatPaginatorModule,
+  MatTabsModule,
+  MatToolbarModule,
+  MatDividerModule,
+  MatListModule
+,MatIconModule} from '@angular/material';
+import {LessonsServiceService} from './lessons-service.service';
+
 
 import { Lesson2Component } from './lesson2/lesson2.component';
 
@@ -25,10 +32,13 @@ import { Lesson2Component } from './lesson2/lesson2.component';
     MatTabsModule,
     MatTableModule,
     MatPaginatorModule,
-  
-    MatToolbarModule
+    MatDividerModule,
+    MatToolbarModule,
+    MatListModule,
+    MatIconModule
 
   ],
-  declarations: [Lesson1Component, LessonLandingComponent, Lesson2Component]
+  declarations: [Lesson1Component, LessonLandingComponent, Lesson2Component],
+  providers: [LessonsServiceService],
 })
 export class LessonsModule { }
