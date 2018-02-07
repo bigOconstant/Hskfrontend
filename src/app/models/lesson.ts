@@ -9,6 +9,7 @@ export class Word {
     Hanzi:string;
     Pinyin:string;
     Definition:string; 
+    File:string;
     Isnew:boolean;
 }
 

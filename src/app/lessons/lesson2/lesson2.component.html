@@ -1,10 +1,10 @@
 <h2>Lesson 2</h2>
 <h3>First Conversation</h3> 
-
-<div class="video-lesson">
+<div class="container-wrapper">
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VowdjV2932Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
-
+</div>
 <h3>Transcript</h3> 
 <div class="translate-section">
 <button mat-elevation-z6 class="translate" mat-raised-button (click)="englishShown = !englishShown" >{{buttonText()}}</button>
@@ -40,40 +40,40 @@
 <mat-toolbar><div class="tool-bar">New Words</div></mat-toolbar>
 <mat-table #table [dataSource]="dataSource">
 
-  <!--- Note that these columns can be defined in any order.
-        The actual rendered columns are set as a property on the row definition" -->
-
-  <!-- Position Column -->
-  <ng-container matColumnDef="hanzi">
+  <ng-container matColumnDef="hanzi" (click)='onAudioPlay(element.File)'>
     <mat-header-cell *matHeaderCellDef> Hanzi </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.Hanzi}} </mat-cell>
+    <mat-cell  (click)='onAudioPlay(element.File)'  *matCellDef="let element"> <a class="clickable-hanzi" >{{element.Hanzi}}</a> </mat-cell>
   </ng-container>
 
-  <!-- Name Column -->
+
   <ng-container matColumnDef="pinyin">
     <mat-header-cell *matHeaderCellDef> Pinyin </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.Pinyin}} </mat-cell>
+    <mat-cell (click)='onAudioPlay(element.File)' *matCellDef="let element"> {{element.Pinyin}} </mat-cell>
   </ng-container>
 
-  <!-- Weight Column -->
-  <!-- <ng-container matColumnDef="level">
-    <mat-header-cell *matHeaderCellDef> Level </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.Level}} </mat-cell>
-  </ng-container> -->
 
-  <!-- Color Column -->
   <ng-container matColumnDef="definition">
     <mat-header-cell *matHeaderCellDef> Definition </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.Definition}} </mat-cell>
+    <mat-cell (click)='onAudioPlay(element.File)' *matCellDef="let element"> {{element.Definition}} </mat-cell>
   </ng-container>
 
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
   <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
 </mat-table>
 
+
+
+
+
+
 </div>
 
 <div class="footer">
 <button mat-elevation-z6 class="previous" mat-raised-button [routerLink]="['/lesson1']"><mat-icon>arrow_backward</mat-icon></button>
 
+
 </div>
+
+
+
+

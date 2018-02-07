@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild,ElementRef } from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
@@ -7,6 +7,7 @@ import {Convo,Word,Lesson} from '../../models/lesson';
 import {DataSource} from '@angular/cdk/collections';
 import {MatTableModule} from '@angular/material';
 import {MatPaginator,PageEvent} from '@angular/material';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 import {Observable} from 'rxjs/Observable';
 @Component({
@@ -20,14 +21,29 @@ export class Lesson2Component implements OnInit {
   dataSource:lessonDataSource;
   displayedColumns = ['hanzi', 'pinyin', 'definition'];
   englishShown:boolean;
+  audio: any;
+
+  @ViewChild('hao') audioPlayerRef: ElementRef;
 
   constructor(private lessonService:LessonsServiceService) {
       this.englishShown = false;
       this.LessonTwo = new Lesson();
-
-      
+      this.audio = new Audio();
+      this.audio.src = 'assets/sounds/wo.m4a';
     
    }
+   tiles = [
+    {text: 'One', cols: 1, rows: 1, color: 'lightblue'},
+    {text: 'Two', cols: 1, rows: 1, color: 'lightgreen'},
+    {text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
+   
+  ];
+   onAudioPlay(file){
+     this.audio = new Audio();
+     this.audio.src = file;
+     this.audio.play();
+
+  }
    dosplayValue(sentence:Convo){
      if(this.englishShown){
        return sentence.English;
@@ -51,8 +67,7 @@ export class Lesson2Component implements OnInit {
   ngOnInit() {
     this.lessonService.getLesson(2).subscribe(data => setTimeout(() =>{
       this.LessonTwo = data;
-      console.log("This lesson is below");
-      console.log(this.LessonTwo);
+     console.log(this.LessonTwo);
       this.lessonService.setLoading(false);
       this.dataSource = new lessonDataSource(this.LessonTwo.Words);
       window.scrollTo(0, 0);
