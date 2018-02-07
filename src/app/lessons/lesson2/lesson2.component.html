@@ -42,19 +42,19 @@
 
   <ng-container matColumnDef="hanzi" (click)='onAudioPlay(element.File)'>
     <mat-header-cell *matHeaderCellDef> Hanzi </mat-header-cell>
-    <mat-cell  (click)='onAudioPlay(element.File)'  *matCellDef="let element"> <a class="clickable-hanzi" >{{element.Hanzi}}</a> </mat-cell>
+    <mat-cell matTooltip="Play Audio" (click)='onAudioPlay(element.File)'  *matCellDef="let element"> <a class="clickable-hanzi" >{{element.Hanzi}}</a> </mat-cell>
   </ng-container>
 
 
   <ng-container matColumnDef="pinyin">
     <mat-header-cell *matHeaderCellDef> Pinyin </mat-header-cell>
-    <mat-cell (click)='onAudioPlay(element.File)' *matCellDef="let element"> {{element.Pinyin}} </mat-cell>
+    <mat-cell matTooltip="Play Audio" (click)='onAudioPlay(element.File)' *matCellDef="let element"> {{element.Pinyin}} </mat-cell>
   </ng-container>
 
 
   <ng-container matColumnDef="definition">
     <mat-header-cell *matHeaderCellDef> Definition </mat-header-cell>
-    <mat-cell (click)='onAudioPlay(element.File)' *matCellDef="let element"> {{element.Definition}} </mat-cell>
+    <mat-cell matTooltip="Play Audio" (click)='onAudioPlay(element.File)' *matCellDef="let element"> {{element.Definition}} </mat-cell>
   </ng-container>
 
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
@@ -69,7 +69,7 @@
 </div>
 
 <div class="footer">
-<button mat-elevation-z6 class="previous" mat-raised-button [routerLink]="['/lesson1']"><mat-icon>arrow_backward</mat-icon></button>
+<button matTooltip="Previous Lesson" mat-elevation-z6 class="previous" mat-raised-button [routerLink]="['/lesson1']"><mat-icon>arrow_backward</mat-icon></button>
 
 
 </div>

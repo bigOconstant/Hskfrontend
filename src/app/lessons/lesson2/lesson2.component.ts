@@ -6,8 +6,8 @@ import {LessonsServiceService} from '../lessons-service.service';
 import {Convo,Word,Lesson} from '../../models/lesson';
 import {DataSource} from '@angular/cdk/collections';
 import {MatTableModule} from '@angular/material';
-import {MatPaginator,PageEvent} from '@angular/material';
-import {MatGridListModule} from '@angular/material/grid-list';
+import {MatPaginator,PageEvent,MatTooltipModule} from '@angular/material';
+import {MatGridListModule,} from '@angular/material/grid-list';
 
 import {Observable} from 'rxjs/Observable';
 @Component({

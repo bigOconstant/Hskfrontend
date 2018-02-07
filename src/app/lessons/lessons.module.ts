@@ -12,7 +12,9 @@ import {MatGridListModule,
   MatTabsModule,
   MatToolbarModule,
   MatDividerModule,
-  MatListModule
+  MatListModule,
+  MatTooltipModule
+    
 ,MatIconModule} from '@angular/material';
 import {LessonsServiceService} from './lessons-service.service';
 
@@ -35,8 +37,9 @@ import { Lesson2Component } from './lesson2/lesson2.component';
     MatDividerModule,
     MatToolbarModule,
     MatListModule,
-    MatIconModule
-
+    MatIconModule,
+    MatTooltipModule
+    
   ],
   declarations: [Lesson1Component, LessonLandingComponent, Lesson2Component],
   providers: [LessonsServiceService],
