@@ -7,6 +7,8 @@
 
 # dependencies
 /node_modules
+# Sound Files
+/src/assets/sounds
 
 # IDEs and editors
 /.idea
