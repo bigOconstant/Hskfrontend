@@ -40,7 +40,7 @@
 <mat-toolbar><div class="tool-bar">New Words</div></mat-toolbar>
 <mat-table #table [dataSource]="dataSource">
 
-  <ng-container matColumnDef="hanzi" (click)='onAudioPlay(element.File)'>
+  <ng-container matColumnDef="hanzi">
     <mat-header-cell *matHeaderCellDef> Hanzi </mat-header-cell>
     <mat-cell matTooltip="Play Audio" (click)='onAudioPlay(element.File)'  *matCellDef="let element"> <a class="clickable-hanzi" >{{element.Hanzi}}</a> </mat-cell>
   </ng-container>
