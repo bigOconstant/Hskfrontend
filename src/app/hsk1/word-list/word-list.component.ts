@@ -73,7 +73,8 @@ export class WordListComponent implements OnInit {
    //this.paginator.pageSize = this.pageSize;
 
     this.hsk1Service.getPagedHsk(this.level,this.paginator.pageSize,this.paginator.pageIndex+1).subscribe(data => setTimeout(() =>{
-      this.hsk1 = data;
+      this.hsk1 = data.Data;
+      this.length = data.Size;
       this.hsk1Service.setLoading(false);
       this.dataSource = new hskDataSource(this.hsk1,this.paginator);
     },0));
@@ -98,7 +99,7 @@ export class WordListComponent implements OnInit {
   
 
   dataSource:hskDataSource;
-  displayedColumns = ['hanzi', 'pinyin', 'definition'];
+  displayedColumns = ['hanzi','Traditional', 'pinyin', 'definition'];
   handlePageEvent(event?:PageEvent){
     this.pageIndex = event.pageIndex;
     this.pageSize = event.pageSize;

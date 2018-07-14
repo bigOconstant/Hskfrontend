@@ -25,10 +25,10 @@ export class appService{
         return this.loading;
     }
 
-     getHsks(level:string){
-         this.setLoading(true);
-        return this.http.get<hsk[]>(this.serviceUrl.url+'/getAllHsk?hskLevel='+level);
-    }
+    //  getHsks(level:string){
+    //      this.setLoading(true);
+    //     return this.http.get<hsk[]>(this.serviceUrl.url+'/getAllHsk?hskLevel='+level);
+    // }
 
     // getPagedHsk(level:string,pageSize:number,page:number){
     //     this.setLoading(true);

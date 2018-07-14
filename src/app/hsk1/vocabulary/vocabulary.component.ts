@@ -135,7 +135,8 @@ export class VocabularyComponent implements OnInit {
 
 
     this.hsk1Service.getPagedHsk(this.level,pagesize,this.paginator.pageIndex+1).subscribe(data => setTimeout(() =>{
-      this.hsk1 = data;
+      this.hsk1 = data.Data;
+      this.length = data.Size;
       this.hsk1Service.setLoading(false);
      // this.dataSource = new hskDataSource(this.hsk1,this.paginator);
     },0));

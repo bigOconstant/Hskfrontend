@@ -8,7 +8,8 @@
         <div class="row clickable" *ngFor="let h of hsk1;let i = index">
             <mat-grid-tile [ngClass]="(!h.flipped)?'hanziPicked':'haziNotPicked'" (click)="openDialog(h)">
               <p class="number inner" *ngIf="!h.flipped">{{((pageIndex+1)*(pageSize))-((pageSize-i-1))}}</p>
-              <label class="inner" *ngIf="!h.flipped">{{h.Hanzi}}</label>
+              <label class="inner" *ngIf="!h.flipped">{{h.Simplified}}</label>
+              
               <label class="inner" *ngIf="h.flipped">{{h.Pinyin}}</label>
 
 

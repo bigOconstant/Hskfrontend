@@ -32,23 +32,24 @@ export class AppComponent implements OnInit{
     {num: "5", name: "HSK5"},
     {num: "6", name: "HSK6"}
 ];
-setNewlevel(val){
-  for(var i = 0; i <this.levels.length;++i){
-    if (this.levels[i].name == val){
-    this.value = this.levels[i].num;
-    this.leveltitle = this.levels[i].name;
-    break;
-    }
-  }
+// setNewlevel(val){
+//   for(var i = 0; i <this.levels.length;++i){
+//     if (this.levels[i].name == val){
+//     this.value = this.levels[i].num;
+//     this.leveltitle = this.levels[i].name;
+//     break;
+//     }
+//   }
   
-  this.updateList();
-}
+//   this.updateList();
+// }
 
-updateList(){
-  this.apps.getHsks(this.value).subscribe(data=>{
-    this.hsk1 = data;
-  })
-}
+// updateList(){
+//   console.log("Calling this get hsks!")
+//   this.apps.getHsks(this.value).subscribe(data=>{
+//     this.hsk1 = data;
+//   })
+// }
 
 
   ngOnInit(): void {

@@ -10,7 +10,12 @@
     <!-- Position Column -->
     <ng-container matColumnDef="hanzi">
       <mat-header-cell *matHeaderCellDef> Hanzi </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.Hanzi}} </mat-cell>
+      <mat-cell *matCellDef="let element"> {{element.Simplified}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Traditional">
+      <mat-header-cell *matHeaderCellDef> Traditional </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Traditional}} </mat-cell>
     </ng-container>
 
     <!-- Name Column -->
@@ -18,6 +23,8 @@
       <mat-header-cell *matHeaderCellDef> Pinyin </mat-header-cell>
       <mat-cell *matCellDef="let element"> {{element.Pinyin}} </mat-cell>
     </ng-container>
+
+  
 
     <!-- Weight Column -->
     <!-- <ng-container matColumnDef="level">
